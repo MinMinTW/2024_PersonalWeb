@@ -1,0 +1,230 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+img{
+    max-width: 100%;
+    height: auto;
+}
+*,*::before, *::after {
+    box-sizing: border-box;
+}
+
+body{
+    font-family: "Noto Sans TC", sans-serif
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+
+.left_312{
+    margin-left: 16.25% ; /*再想一下*/
+}
+@media(max-width: 375px) {
+    .left_312{margin-left: 0 ;}
+}
+.wrap{
+    max-width: 1920px;
+    margin: 0 auto;
+}
+
+.logo{
+    display: block;
+    background-image: url('./image/logo.svg');
+    height: 40px;
+    width: 90px;
+    text-indent: 101%;
+    overflow: hidden;
+}
+.header{
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    padding: 32px 0;
+}
+.menu{
+    display: flex;
+    margin-left: 16.56%;
+}
+
+
+.menu li{
+    font-weight: 600;
+    line-height: 24px;
+    padding: 4px 8px;
+}
+
+@media (max-width: 375px){
+    .header {
+        display: flex;
+        justify-content: space-between;
+        padding: 11.5px 12px;
+    }
+    .menu{
+        max-height: 0px;
+        overflow: hidden;
+        transition: max-height 1.5s;
+        position: absolute;
+        z-index: 100;
+        top: 53px;
+        left: 0;
+        right: 0;
+    } 
+}
+.burger_btn{
+    display: none;
+}
+
+@media (max-width: 375px){
+    .burger_btn{
+        display: block;
+    }
+    .menushow.menu{
+        max-height: 366px;
+    }
+}
+
+.mr40{
+    margin-right: 40px;
+}
+.intro{
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.intro_h2{
+    font-weight: 600;
+    font-size: 40px;
+    line-height: 48px;
+    margin-bottom: 24px;
+}
+.experience{
+    font-size: 20px;
+    line-height: 30px;
+    color: #5B5B5B;
+    margin-bottom: 8px;;
+}
+
+.words_inline{
+    display: flex;
+}
+
+
+.experience_eng{
+    color: #C1C1C1;
+    line-height: 24px;
+    margin-top: 8px;
+    margin-bottom: 60px;
+}
+.mark{
+    background-image: url('./image/mark.png');
+    background-repeat: no-repeat;
+    background-position: bottom;
+}
+
+.me{
+    background-image: url('./image/hero-lg.png');
+    width: 1154px;
+    height: 792px;
+    background-size: cover;
+    background-position: center;
+}
+
+@media(max-width: 375px) {
+    .intro{
+        flex-wrap: wrap-reverse;
+    }
+    .words_inline{
+        display: block;
+
+    }
+    .intro_h2{
+        font-weight: 700;
+        font-size: 32px;
+        line-height: 38.4px;
+    }
+    .intro_words{
+        text-align: center;
+        margin: 0 auto;
+    }
+    .experience_eng{
+        margin-top: 16px;
+        width: 268px;
+    }
+    .me{
+        margin: 0;
+        width: 100%;
+        height: 285px;
+        background-image: url('./image/hero-sm.png');
+    }
+
+
+}
+
+.social{
+    display: flex;
+}
+.social li{
+    margin-right: 16px;
+}
+
+@media(max-width: 375px) {
+    .social{
+        width: 152px;
+        margin: 0 auto;
+        justify-content: space-between;
+    }
+    .social li{
+        width: 40px;
+        margin-right: 0;
+    }
+}
