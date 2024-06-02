@@ -8,6 +8,7 @@ $(document).ready(function() {
         $('body').toggleClass('shieldshow')
     })
 })
+ 
 
 $(document).ready(function() {
     const swiper = new Swiper('.swiper', {
