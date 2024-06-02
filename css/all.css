@@ -571,7 +571,7 @@ a{
     }
     .workTwo_top{
         background-image: url('./image/homepage-work2-sm.png');
-        max-width: 375px;
+        width: 100%;
         height: 390px;
     }
     .workTwo::before{
@@ -622,7 +622,7 @@ a{
     .workThree_left{
         background-image: url('./image/homepage-work3-bg.png');
         margin: 0;
-        max-width: 375px;
+        width: 100%;
         height: 390px;
         background-size: cover;
         background-position: center; 
