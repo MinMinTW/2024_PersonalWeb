@@ -81,7 +81,11 @@ a{
     margin: 0 auto;
     position: relative;
 }
-
+@media (max-width: 767px){
+    .wrap{
+        max-width: 375px;
+    }
+}
 .logo{
     display: block;
     background-image: url('./image/logo.svg');
@@ -115,6 +119,7 @@ a{
         display: flex;
         justify-content: space-between;
         padding: 11.5px 12px;
+        max-width: 375px;
     }
     .logo{
         width: 74px;
@@ -234,6 +239,7 @@ a{
 @media(max-width: 767px) {
     .intro{
         flex-wrap: wrap-reverse;
+        max-width: 375px;
     }
     .words_inline{
         display: block;
@@ -571,7 +577,7 @@ a{
     }
     .workTwo_top{
         background-image: url('./image/homepage-work2-sm.png');
-        width: 100%;
+        max-width: 375px;
         height: 390px;
     }
     .workTwo::before{
@@ -622,7 +628,7 @@ a{
     .workThree_left{
         background-image: url('./image/homepage-work3-bg.png');
         margin: 0;
-        width: 100%;
+        max-width: 375px;
         height: 390px;
         background-size: cover;
         background-position: center; 
@@ -951,5 +957,8 @@ a{
     }
     .cards_a_p{
         font-weight: 700;
+    }
+    .cards_a_white{
+        color: white;
     }
 }
