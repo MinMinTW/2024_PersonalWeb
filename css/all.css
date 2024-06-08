@@ -56,7 +56,7 @@ img{
 }
 
 body{
-    font-family: "Noto Sans TC", sans-serif
+    font-family: "Noto Sans TC", sans-serif;
 }
 
 a{
@@ -64,6 +64,13 @@ a{
     color: black;
 }
 
+
+.container{
+    margin: 0 312px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 .mr40{
     margin-right: 40px;
 }
@@ -71,19 +78,20 @@ a{
     margin-left: 16.25% ; /*再想一下*/
 }
 @media(max-width: 767px) {
-    .left_312{margin-left: 0 ;}
+    .left_312{
+        margin-left: 0 ;
+    }
+    .container{
+    margin: 0 ;
+    display: block
+}
 }
 
 
 
-.wrap{
-    max-width: 1920px;
-    margin: 0 auto;
-    position: relative;
-}
 @media (max-width: 767px){
     .wrap{
-        max-width: 375px;
+        margin: 0 auto;
     }
 }
 .logo{
@@ -119,7 +127,6 @@ a{
         display: flex;
         justify-content: space-between;
         padding: 11.5px 12px;
-        max-width: 375px;
     }
     .logo{
         width: 74px;
@@ -215,7 +222,6 @@ a{
     display: flex;
 }
 
-
 .experience_eng{
     color: #C1C1C1;
     line-height: 24px;
@@ -239,7 +245,6 @@ a{
 @media(max-width: 767px) {
     .intro{
         flex-wrap: wrap-reverse;
-        max-width: 375px;
     }
     .words_inline{
         display: block;
@@ -350,13 +355,11 @@ a{
 
 .workOne_bg{
     background-image: url('./image/homepage-work1-bg.png');
-    max-width: 1920px;
     height: 800px;
     background-size: cover;
     background-position: center;
-    display: flex;
-    align-items: center;
     position: relative;
+    display: flex;
 }
 .workOne_bg::before{
     content: "";
@@ -370,13 +373,15 @@ a{
     z-index: 1;
 }
 .workOne_left{
-    margin: 80px 55px 0 16.25%;
     position: relative;
     z-index: 2;
+    align-self: end;
+    margin-right: 55px;
 }
 .work_square{
     position: relative;
     width: 526px;
+    height: 400px;
     backdrop-filter: blur(3px);
     z-index: 2;
 }
@@ -398,11 +403,9 @@ a{
     position: relative;
     z-index: 2;
     margin-bottom: 56px;
-    width: 375px;
 }
 .work_info_content{
     margin: 80px 40px 40px 40px;
-    width: 446px;
     border-bottom: 1px solid #F1F1F1;
 }
 .work_h4{
@@ -495,6 +498,7 @@ a{
     .work_square{
         width: auto;
         backdrop-filter: none;
+        height: auto;
     }
     .work_square::before{
         display: none;
@@ -502,6 +506,7 @@ a{
     .work_info{
         margin: 24px 0 48px 0;
         padding: 0 24px;
+        width: 100%;
     }
     .work_info_content{
         margin: 0 auto;
@@ -549,7 +554,6 @@ a{
 
 .workTwo{
     background-image: url('./image/homepage-work2-lg.png');
-    max-width: 1920px;
     height: 800px;
     background-size: cover;
     background-position: center;
@@ -577,8 +581,8 @@ a{
     }
     .workTwo_top{
         background-image: url('./image/homepage-work2-sm.png');
-        max-width: 375px;
         height: 390px;
+        background-size: cover;
     }
     .workTwo::before{
         display: none;
@@ -589,13 +593,11 @@ a{
 
 .workThree_bg{
     background-image: url('./image/homepage-work3-bg.png');
-    max-width: 1920px;
     height: 800px;
     background-size: cover;
     background-position: center;
-    display: flex;
-    align-items: center;
     position: relative;
+    display: flex;
 }
 .workThree_bg::before{
     content: "";
@@ -609,14 +611,13 @@ a{
     z-index: 1;
 }
 .workThree_left{
-    margin: 176px 49px 112px 16.25%;
     position: relative;
     z-index: 2;
+    margin-right: 49px;
 }
 @media(max-width:767px){
     .workThree_bg{
         background-image: none;
-        max-width: 375px;
         height: auto;
         background-size: cover;
         background-position: center;
@@ -628,7 +629,6 @@ a{
     .workThree_left{
         background-image: url('./image/homepage-work3-bg.png');
         margin: 0;
-        max-width: 375px;
         height: 390px;
         background-size: cover;
         background-position: center; 
@@ -660,11 +660,9 @@ a{
     background-image: url('./image/homepage-services-bg.png');
     height: 881px;
     margin: 0 auto;
-    padding: 120px;
+    padding-top: 120px;
 }
 .service_cards{
-    display: flex;
-    justify-content: center;
     margin-top: 80px;
 }
 .card_bg{
@@ -674,9 +672,7 @@ a{
     background-size: cover;
     background-position: center;
     border-radius: 16px;
-}
-.card_bg_mr{
-    margin-right: 24px;
+    width: calc(25% - 18px)
 }
 .card_bg a{
     display: block;
@@ -727,8 +723,9 @@ a{
         padding: 80px 34.5px;
     }
     .service_cards{
-        display: block;
         margin-top: 40px;
+        display: flex;
+        flex-direction: column;
     }
     .card_bg{
         background-image: url('./image/service-item-bg.png');
@@ -765,22 +762,22 @@ a{
 .articles_cards_show{
     display: none;
 }
-.swiper {
-    width: 1296px;
-    height: 398px;
-}
+
 .articles_title{
     margin-top: 120px;
 }
-.swiper{
+.swiper_cards {
+    max-width:1296px;
+    height: 398px;
+    margin: 0 auto;
     margin-top: 80px;
     margin-bottom: 120px;
 }
-.swiper-wrapper{
-    height: 346px;
-}
+
 .swiper-slide{
     width: 416px;
+    height: 346px;
+    margin-bottom: 40px;
 }
 .swiper-slide img{
     border-radius: 8px;
@@ -816,14 +813,16 @@ a{
         margin-bottom: 40px;
     }
     .swiper_hide{
-        display: none!important;
+        display: none;
+    }
+    .swiper_cards{
+        display: none;
     }
     .articles_cards_show{
         display: block;
     }
     .cards_show_content{
-        max-width: 351px;
-        margin: 0 12px 0 12px;
+        margin: 0 12px;
     }
     .mb48{
         margin-bottom: 48px;
@@ -873,7 +872,6 @@ a{
 /*表尾*/
 .footer{
     background-image: url('./image/footer-bg-lg.png');
-    max-width: 1920px;
     height: 424px;
     background-size: cover;
     background-position: center;
@@ -930,7 +928,6 @@ a{
 @media(max-width:767px){
     .footer{
         background-image: url('./image/footer-bg-sm.png');
-        max-width: 375px;
         height: auto;
         display: block;
         margin-top: 80px;

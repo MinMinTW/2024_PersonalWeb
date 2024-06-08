@@ -4,14 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>個人品牌網站</title>
-    <link rel="stylesheet" href="./css/all.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&family=Roboto&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@40,400,0,0" />
     <script src="https://code.jquery.com/jquery-3.7.1.slim.min.js" integrity="sha256-kmHvs0B+OpCW5GVHUNjv9rOmY0IvSIRcf7zGUDTDQM8=" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <link rel="stylesheet" href="./css/all.css">
 </head>
 <body>
     <div class="wrap">
@@ -62,8 +61,8 @@
                 <div class="title_right"></div>
             </div>
         </div>
-        <div class="workOne">
-            <div class="workOne_bg">
+        <div class="workOne_bg ">
+            <div class=" container">
                 <div class="workOne_left">
                     <img src="./css/image/homepage-work1.png" alt="">
                 </div>
@@ -86,6 +85,7 @@
                         </a>
                     </div>
                 </div>
+            
             </div>
         </div>
         <div class="workTwo">
@@ -112,6 +112,7 @@
         </div>
         <div class="workThree">
             <div class="workThree_bg">
+                <div class="container">
                 <div class="workThree_left">
                     <img src="./css/image/homepage-work3.png" alt="">
                 </div>
@@ -135,6 +136,7 @@
                     </div>
                 </div>
             </div>
+            </div>
         </div>
         <div class="service">
             <div class="service_title">
@@ -144,20 +146,20 @@
                 </h3>
                 <div class="title_right"></div>
             </div>
-            <ul class="service_cards">
-                <li class="card_bg card_bg_mr">
+            <ul class="service_cards container">
+                <li class="card_bg">
                     <a href="">
                         <img class="card_visual" src="./css/image/service-item-visual.svg" alt="">
                         <h4 class="card_h4">平面設計</h4>
                     </a>
                 </li>
-                <li class="card_bg card_bg_mr">
+                <li class="card_bg">
                     <a href="">
                         <img class="card_UI" src="./css/image/service-item-ui.svg" alt="">
                         <h4 class="card_h4">UI 設計</h4>
                     </a>
                 </li>
-                <li class="card_bg card_bg_mr">
+                <li class="card_bg">
                     <a href="">
                         <img class="card_htmlcss" src="./css/image/service-item-html&css.svg" alt="">
                         <h4 class="card_h4">切版服務</h4>
@@ -219,8 +221,9 @@
             </button>
             </div>
 
+            <div class="swiper_cards container">
             <div class="swiper swiper_hide">
-                <ul class="swiper-wrapper">
+                <ul class="swiper-wrapper ">
                     <li class="swiper-slide">
                         <img src="./css/image/article-image1.png" alt="">
                         <p class="articles_p">Vision Pro 登場！Vision Pro UI/UX 設計重點大公開 (上)</p>
@@ -306,7 +309,7 @@
         </div>
        
     </div>
-
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="all.js"></script>
 </body>
 </html>
