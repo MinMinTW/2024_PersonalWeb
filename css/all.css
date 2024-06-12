@@ -85,6 +85,9 @@ a{
     margin: 0 ;
     display: block
 }
+    .mr40{
+        margin-right: 0;
+    }
 }
 
 
@@ -173,15 +176,14 @@ a{
         top: 56px;
         left: 0;
         right: 0;
-        display: block;
+        display: flex;
         margin: 0;
         background-color: #FFFFFF;
         border-top: 1px solid #F1F1F1;
+        flex-direction:column;
+        align-items:center
     } 
-    .menu li{
-        text-align: center;
-        width: 100%;
-    }
+
     .menu-mb24{
         margin-bottom: 24px;
     }
@@ -226,9 +228,7 @@ a{
         height: 100%;
         z-index: 2;
     }
-    .menu-angles{
-        display: inline-block;
-    }
+
 }
 
 
