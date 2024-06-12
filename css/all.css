@@ -120,6 +120,38 @@ a{
     font-weight: 600;
     line-height: 24px;
     padding: 4px 8px;
+    position: relative;
+}
+
+.menu-angles::before, .menu-angles::after{
+    position: absolute;
+}
+
+.menu-angles:hover{
+    font-weight: bold;
+}
+.menu-angles:hover::before{
+    top: 0;
+    left: 0;
+    content: "";
+    display: block;
+    width: 8px;
+    height: 8px;
+    border-top: 1px solid #919191;
+    border-left: 1px solid #919191;
+}
+.menu-angles:hover::after{
+    top: 0;
+    right: 0;
+    content: "";
+    display: block;
+    width: 8px;
+    height: 8px;
+    border-top: 1px solid #919191;
+    border-right: 1px solid #919191;
+}
+.menu-angles:hover::before, .menu-angles:hover::after{
+    -webkit-box-reflect: below 16px;
 }
 
 @media (max-width: 992px){
@@ -159,7 +191,6 @@ a{
     .menu-mb40{
         margin-bottom: 40px;
     }
-
 }
 .burger_btn{
     display: none;
@@ -195,7 +226,9 @@ a{
         height: 100%;
         z-index: 2;
     }
-    
+    .menu-angles{
+        display: inline-block;
+    }
 }
 
 
