@@ -50,6 +50,7 @@ table {
 img{
     max-width: 100%;
     height: auto;
+    vertical-align: middle;
 }
 *,*::before, *::after {
     box-sizing: border-box;
@@ -66,30 +67,23 @@ a{
 
 
 .container{
-    margin: 0 16.25%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    max-width: 1296px;
+    margin: 0 auto;
+}
+@media(max-width: 1295px){
+    .container{
+        padding:0 12px
+    }
 }
 .mr40{
     margin-right: 40px;
 }
-.left_312{
-    margin-left: 16.25% ; /*再想一下*/
-}
+
 @media(max-width: 992px) {
-    .left_312{
-        margin-left: 0 ;
-    }
-    .container{
-    margin: 0 ;
-    display: block
-}
     .mr40{
         margin-right: 0; /*RWD時 選單置中不推擠*/
     }
 }
-
 
 
 @media (max-width: 992px){
@@ -109,14 +103,15 @@ a{
 .header{
     display: flex;
     align-items: center;
-    justify-content: left;
+    justify-content:space-between;
     padding: 32px 0;
 }
 
-
 .menu{
     display: flex;
-    margin-left: 16.56%;
+    flex-grow: 1; 
+    justify-content: center;
+    margin-right: 90px;
 }
 
 .menu li{
@@ -244,9 +239,7 @@ li:hover .menu-angles{
 
 
 .intro{
-    margin: 0 auto;
     display: flex;
-    justify-content: space-between;
     align-items: center;
 }
 .intro_h2{
@@ -282,11 +275,13 @@ li:hover .menu-angles{
     background-image: url('./image/hero-lg.png');
     width: 1154px;
     height: 792px;
-    background-size: cover;
+    background-size: contain;
+    background-repeat: no-repeat;
     background-position: center;
 }
 
 @media(max-width: 992px) {
+    
     .intro{
         flex-wrap: wrap-reverse;
     }
@@ -298,6 +293,7 @@ li:hover .menu-angles{
         font-weight: 700;
         font-size: 32px;
         line-height: 38.4px;
+        margin-top: 40px;   
     }
     .intro_words{
         text-align: center;
@@ -308,9 +304,9 @@ li:hover .menu-angles{
         width: 268px;
     }
     .me{
-        margin: 0;
         width: 100%;
-        height: 285px;
+        height: 286px;
+        background-size: cover;
         background-image: url('./image/hero-sm.png');
     }
 
@@ -403,7 +399,12 @@ li:hover .menu-angles{
     background-size: cover;
     background-position: center;
     position: relative;
+}
+.workOne_content, .workThree_content{
     display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
 }
 .workOne_bg::before{
     content: "";
@@ -513,6 +514,12 @@ li:hover .menu-angles{
     .workOne_bg::before{
         display: none;
     }
+    .workOne_bg .container, .workThree_bg .container{
+        padding: 0;
+    }
+    .workOne_content, .workThree_content{
+        display: block
+    }
     .workOne_left{
         background-image: url('./image/homepage-work1-bg.png');
         background-size: cover;
@@ -546,8 +553,8 @@ li:hover .menu-angles{
     .work_square{
         width: 100%;
         backdrop-filter: none;
-        height: auto;
         margin: 0 auto;
+        height: auto;
     }
     .work_square::before{
         display: none;
@@ -606,8 +613,6 @@ li:hover .menu-angles{
     height: 800px;
     background-size: cover;
     background-position: center;
-    display: flex;
-    align-items: center;
     position: relative;
 }
 
@@ -621,6 +626,12 @@ li:hover .menu-angles{
     background-color: #0A1013;
     opacity: 50%;
     z-index: 1;
+}
+.workTwo_content{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    height: 100%;
 }
 @media(max-width:992px){
     .workTwo{
@@ -646,7 +657,6 @@ li:hover .menu-angles{
     background-size: cover;
     background-position: center;
     position: relative;
-    display: flex;
 }
 .workThree_bg::before{
     content: "";
@@ -662,7 +672,6 @@ li:hover .menu-angles{
 .workThree_left{
     position: relative;
     z-index: 2;
-    margin-right: 49px;
 }
 @media(max-width:992px){
     .workThree_bg{
@@ -713,6 +722,8 @@ li:hover .menu-angles{
 }
 .service_cards{
     margin-top: 80px;
+    display: flex;
+    justify-content: space-between;
 }
 .card_bg{
     background-image: url('./image/service-item-bg.png');
@@ -769,12 +780,13 @@ li:hover .menu-angles{
         background-image:none;
         background-color: #FAFAFA;
         height: auto;
-        padding: 80px 34.5px;
+        padding: 80px 0;
     }
     .service_cards{
         margin-top: 40px;
         display: flex;
         flex-direction: column;
+        align-items: center;
     }
     .card_bg{
         background-image: url('./image/service-item-bg.png');
@@ -871,7 +883,7 @@ li:hover .menu-angles{
         display: block;
     }
     .cards_show_content{
-        margin: 0 12px;
+        width: 100%;
     }
     .mb48{
         margin-bottom: 48px;
@@ -924,12 +936,12 @@ li:hover .menu-angles{
     height: 424px;
     background-size: cover;
     background-position: center;
+}
+.footer_content{
     display: flex;
     justify-content: space-between;
+    height: 100%;
     align-items: center;
-}
-.footer_left{
-    margin-left:16.25% ;
 }
 .footer_left_logo{
     display: block;
@@ -945,11 +957,10 @@ li:hover .menu-angles{
     line-height: 24px;
     color: #919191;
 }
-.footer_right{
-    margin-right: 16.25%;
-}
+
 .right_cards_a{
-    display: block;
+    display: flex;
+    align-items: center;
     padding: 8px 24px;
 }
 .right_cards_content{
@@ -960,10 +971,6 @@ li:hover .menu-angles{
 }
 .right_cards_black{
     background-color: black;
-}
-.cards_a_content{
-    display: flex;
-    align-items: center;
 }
 .cards_a_p{
     margin-left: 8px;
@@ -978,15 +985,16 @@ li:hover .menu-angles{
     .footer{
         background-image: url('./image/footer-bg-sm.png');
         height: auto;
-        display: block;
         margin-top: 80px;
+    }
+    .footer_content{
+        display: block;
         padding: 40px 12px;
     }
     .footer_left{
         text-align:center;
         margin: 0 auto;
         margin-bottom: 40px;
-
     }
     .footer_left_content{
         line-height: 24px;
